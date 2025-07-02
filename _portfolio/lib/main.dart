@@ -1,4 +1,4 @@
-import 'standarts.dart';
+import '__tools.dart';
 import 'card_page.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +12,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: COLOR_MAIN_SHADE,
+        scaffoldBackgroundColor: ColorsTool.mainShade,
         brightness: Brightness.dark,
         textTheme: TextTheme(bodyMedium: const TextStyle(fontSize: 18)),
         textButtonTheme: TextButtonThemeData(

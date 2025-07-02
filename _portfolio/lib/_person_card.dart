@@ -1,4 +1,4 @@
-import 'standarts.dart';
+import '__tools.dart';
 import 'package:flutter/material.dart';
 
 class PersonCard extends StatefulWidget {
@@ -15,13 +15,15 @@ class _PersonCardState extends State<PersonCard> {
       padding: EdgeInsetsGeometry.all(36),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: COLOR_MAIN,
+        color: ColorsTool.main,
       ),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         spacing: 36,
         children: [
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             spacing: 18,
             children: [
@@ -41,13 +43,14 @@ class _PersonCardState extends State<PersonCard> {
           ),
           Expanded(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   'Dmytro SKIBO',
                   style: TextStyle(fontSize: 36),
                   textAlign: TextAlign.left,
                 ),
-                Divider(thickness: 2, color: COLOR_MAIN_SHADE),
+                Divider(thickness: 2, color: ColorsTool.mainShade),
                 Text(
                   'Learn Computer Science in National Aerospace University - Kharkiv Aviation Institute. Faculty of Aircraft Control Systems. Department of Mathematical Modelling and Artificial Intelligence.',
                 ),

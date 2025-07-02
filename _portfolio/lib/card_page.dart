@@ -1,4 +1,4 @@
-import 'standarts.dart';
+import '__tools.dart';
 import '_person_card.dart';
 import 'package:flutter/material.dart';
 
@@ -13,12 +13,12 @@ class _CardPageState extends State<CardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: COLOR_MAIN_SHADE,
+      backgroundColor: ColorsTool.mainShade,
       appBar: AppBar(
-        backgroundColor: COLOR_MAIN,
+        backgroundColor: ColorsTool.main,
         leading: IconButton(
           onPressed: () => print('-> boy'),
-          icon: Icon(Icons.accessibility, size: 36, color: COLOR_ACCENT),
+          icon: Icon(Icons.accessibility, size: 36, color: ColorsTool.accent),
         ),
         title: Row(
           spacing: 27,
@@ -46,10 +46,14 @@ class _CardPageState extends State<CardPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => print('-> up'),
-        backgroundColor: COLOR_ACCENT,
+        backgroundColor: ColorsTool.accent,
         shape: CircleBorder(),
         child: Center(
-          child: Icon(Icons.arrow_drop_up, size: 54, color: COLOR_ACCENT_SHADE),
+          child: Icon(
+            Icons.arrow_drop_up,
+            size: 54,
+            color: ColorsTool.accentShade,
+          ),
         ),
       ),
     );

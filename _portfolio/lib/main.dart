@@ -1,3 +1,5 @@
+import 'package:_portfolio/skill_page.dart';
+
 import '__tools.dart';
 import 'card_page.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +21,11 @@ class App extends StatelessWidget {
           style: TextButton.styleFrom(foregroundColor: Colors.white),
         ),
       ),
-      home: CardPage(),
+      initialRoute: '/cards',
+      routes: {
+        '/cards': (context) => const CardPage(),
+        '/skills': (context) => const SkillPage(),
+      },
     );
   }
 }

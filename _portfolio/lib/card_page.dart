@@ -17,14 +17,14 @@ class _CardPageState extends State<CardPage> {
       appBar: AppBar(
         backgroundColor: ColorsTool.main,
         leading: IconButton(
-          onPressed: () => print('-> boy'),
+          onPressed: () => print('-> card page'),
           icon: Icon(Icons.accessibility, size: 36, color: ColorsTool.accent),
         ),
         title: Row(
           spacing: 27,
           children: [
             TextButton(
-              onPressed: () => print('-> Skills'),
+              onPressed: () => Navigator.pushNamed(context, '/skills'),
               child: Text('Skills'),
             ),
             TextButton(

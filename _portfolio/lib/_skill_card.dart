@@ -1,9 +1,10 @@
 import '__tools.dart';
+import '__widgets.dart';
 import 'package:flutter/material.dart';
 
 class SkillCard extends StatefulWidget {
   final String title;
-  final String body;
+  final List<Attribute> body;
 
   const SkillCard({super.key, required this.title, required this.body});
 
@@ -20,7 +21,12 @@ class _SkillCardState extends State<SkillCard> {
         borderRadius: BorderRadius.circular(12),
         color: ColorsTool.main,
       ),
-      child: Column(children: [Text(widget.title), Text(widget.body)]),
+      child: Column(
+        children: [
+          Text(widget.title),
+          Column(spacing: 9, children: widget.body),
+        ],
+      ),
     );
   }
 }

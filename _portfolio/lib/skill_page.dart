@@ -43,54 +43,50 @@ class _SkillPageState extends State<SkillPage> {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsetsGeometry.all(36),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Wrap(
+            crossAxisAlignment: WrapCrossAlignment.start,
             spacing: 36,
+            runSpacing: 36,
             children: [
-              Expanded(
-                child: SkillCard(
-                  title: 'Hard skills :',
-                  body: [
-                    Attribute(text: 'C++', level: Level.expert),
-                    Attribute(text: 'C#', level: Level.intermediate),
-                    Attribute(text: 'Python', level: Level.advanced),
-                    Attribute(text: 'Swift', level: Level.beginner),
-                    Attribute(text: 'Kotlin', level: Level.beginner),
-                    Attribute(text: 'HTML', level: Level.advanced),
-                    Attribute(text: 'CSS', level: Level.advanced),
-                    Attribute(text: 'JavaScript', level: Level.advanced),
-                    Attribute(text: 'Dart', level: Level.intermediate),
-                    Attribute(text: 'Flutter', level: Level.intermediate),
-                    Attribute(text: 'GodotScript', level: Level.expert),
-                    Attribute(text: 'Git', level: Level.advanced),
-                  ],
-                ),
+              SkillCard(
+                title: 'Hard skills :',
+                body: [
+                  Attribute(text: 'C++', level: Level.expert),
+                  Attribute(text: 'C#', level: Level.intermediate),
+                  Attribute(text: 'Python', level: Level.advanced),
+                  Attribute(text: 'Swift', level: Level.beginner),
+                  Attribute(text: 'Kotlin', level: Level.beginner),
+                  Attribute(text: 'HTML', level: Level.advanced),
+                  Attribute(text: 'CSS', level: Level.advanced),
+                  Attribute(text: 'JavaScript', level: Level.advanced),
+                  Attribute(text: 'Dart', level: Level.intermediate),
+                  Attribute(text: 'Flutter', level: Level.intermediate),
+                  Attribute(text: 'GodotScript', level: Level.expert),
+                  Attribute(text: 'Git', level: Level.advanced),
+                ],
               ),
-              Expanded(
-                child: SkillCard(
-                  title: 'Soft skills :',
-                  body: [
-                    Attribute(text: 'Creativity'),
-                    Attribute(text: 'Problem-solving'),
-                    Attribute(text: 'Adaptability'),
-                    Attribute(text: 'Communication'),
-                    Attribute(text: 'Teamwork'),
-                    Attribute(text: 'Leadership'),
-                    Attribute(text: 'Attention to Detail'),
-                  ],
-                ),
+              SkillCard(
+                title: 'Soft skills :',
+                body: [
+                  Attribute(text: 'Creativity'),
+                  Attribute(text: 'Problem-solving'),
+                  Attribute(text: 'Adaptability'),
+                  Attribute(text: 'Communication'),
+                  Attribute(text: 'Teamwork'),
+                  Attribute(text: 'Leadership'),
+                  Attribute(text: 'Attention to Detail'),
+                ],
               ),
-              Expanded(
-                child: SkillCard(
-                  title: 'Languages :',
-                  body: [
-                    Attribute(text: 'Ukrainian', level: Level.fluent),
-                    Attribute(text: 'English', level: Level.intermediate),
-                    Attribute(text: 'Russian', level: Level.upperIntermediate),
-                    Attribute(text: 'Polish', level: Level.intermediate),
-                  ],
-                ),
+              SkillCard(
+                title: 'Languages :',
+                body: [
+                  Attribute(text: 'Ukrainian', level: Level.fluent),
+                  Attribute(text: 'English', level: Level.intermediate),
+                  Attribute(text: 'Russian', level: Level.upperIntermediate),
+                  Attribute(text: 'Polish', level: Level.intermediate),
+                ],
               ),
+              Spacer(),
             ],
           ),
         ),

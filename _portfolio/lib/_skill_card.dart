@@ -17,6 +17,7 @@ class _SkillCardState extends State<SkillCard> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsetsGeometry.all(36),
+      width: 333,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         color: ColorsTool.main,
@@ -24,6 +25,7 @@ class _SkillCardState extends State<SkillCard> {
       child: Column(
         children: [
           Text(widget.title),
+          dividerMain,
           Column(spacing: 9, children: widget.body),
         ],
       ),

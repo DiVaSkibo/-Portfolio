@@ -1,6 +1,8 @@
 import '__tools.dart';
 import 'package:flutter/material.dart';
 
+const Divider dividerMain = Divider(thickness: 2, color: ColorsTool.mainShade);
+
 class LevelStatus extends StatefulWidget {
   final Level level;
 
@@ -41,7 +43,7 @@ class _AttributeState extends State<Attribute> {
     return Row(
       children: [
         Text(widget.text),
-        Spacer(),
+        if (level != null) Spacer(),
         if (level != null) LevelStatus(level: level),
       ],
     );

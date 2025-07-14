@@ -29,31 +29,41 @@ final class ColorsTool {
   };
 }
 
-TextStyle statusTextStyle(Level level) => TextStyle(
-  fontSize: 13,
-  fontWeight: FontWeight.w500,
-  fontStyle: FontStyle.italic,
-  color: ColorsTool.level[level],
-);
+final class StyleTool {
+  static const TextStyle header = TextStyle(fontSize: 36);
+
+  static TextStyle statusText(Level level) => TextStyle(
+    fontSize: 13,
+    fontWeight: FontWeight.w500,
+    fontStyle: FontStyle.italic,
+    color: ColorsTool.level[level],
+  );
+}
 
 final class TextTool {
   static final Map<Level, Text> level = {
-    Level.beginner: Text('Beginner', style: statusTextStyle(Level.beginner)),
+    Level.beginner: Text(
+      'Beginner',
+      style: StyleTool.statusText(Level.beginner),
+    ),
     Level.elementary: Text(
       'Elementary',
-      style: statusTextStyle(Level.elementary),
+      style: StyleTool.statusText(Level.elementary),
     ),
     Level.intermediate: Text(
       'Intermediate',
-      style: statusTextStyle(Level.intermediate),
+      style: StyleTool.statusText(Level.intermediate),
     ),
     Level.upperIntermediate: Text(
       'Upper-Intermediate',
-      style: statusTextStyle(Level.upperIntermediate),
+      style: StyleTool.statusText(Level.upperIntermediate),
     ),
-    Level.advanced: Text('Advanced', style: statusTextStyle(Level.advanced)),
-    Level.expert: Text('Expert', style: statusTextStyle(Level.expert)),
-    Level.guru: Text('Guru', style: statusTextStyle(Level.guru)),
-    Level.fluent: Text('Fluent', style: statusTextStyle(Level.fluent)),
+    Level.advanced: Text(
+      'Advanced',
+      style: StyleTool.statusText(Level.advanced),
+    ),
+    Level.expert: Text('Expert', style: StyleTool.statusText(Level.expert)),
+    Level.guru: Text('Guru', style: StyleTool.statusText(Level.guru)),
+    Level.fluent: Text('Fluent', style: StyleTool.statusText(Level.fluent)),
   };
 }

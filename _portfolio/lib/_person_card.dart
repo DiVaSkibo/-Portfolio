@@ -31,6 +31,7 @@ class _PersonCardState extends State<PersonCard> {
     return SingleChildScrollView(
       child: Container(
         padding: EdgeInsetsGeometry.all(36),
+        width: 1000,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
           color: ColorsTool.main,

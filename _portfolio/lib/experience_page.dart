@@ -17,7 +17,7 @@ class _ExperiencePageState extends State<ExperiencePage> {
       appBar: AppBar(
         backgroundColor: ColorsTool.main,
         leading: IconButton(
-          onPressed: () => Navigator.pushNamed(context, '/cards'),
+          onPressed: () => Navigator.pushNamed(context, '/person'),
           icon: Icon(Icons.accessibility, size: 36, color: ColorsTool.accent),
         ),
         title: Row(
@@ -43,6 +43,7 @@ class _ExperiencePageState extends State<ExperiencePage> {
           child: Padding(
             padding: EdgeInsetsGeometry.all(36),
             child: Wrap(
+              alignment: WrapAlignment.center,
               spacing: 36,
               runSpacing: 36,
               children: [
@@ -82,7 +83,6 @@ class _ExperiencePageState extends State<ExperiencePage> {
                     'Worked with the team.',
                   ],
                 ),
-                Spacer(),
               ],
             ),
           ),

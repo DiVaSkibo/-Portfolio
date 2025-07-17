@@ -37,6 +37,7 @@ final class StyleTool {
   );
   static const TextStyle note = TextStyle(
     fontWeight: FontWeight.w500,
+    fontStyle: FontStyle.italic,
     color: ColorsTool.notation,
   );
 

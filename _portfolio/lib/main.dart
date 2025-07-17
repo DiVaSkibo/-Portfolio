@@ -2,7 +2,7 @@ import 'package:_portfolio/experience_page.dart';
 import 'package:_portfolio/skill_page.dart';
 
 import '__tools.dart';
-import 'card_page.dart';
+import 'person_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const App());
@@ -22,9 +22,9 @@ class App extends StatelessWidget {
           style: TextButton.styleFrom(foregroundColor: Colors.white),
         ),
       ),
-      initialRoute: '/cards',
+      initialRoute: '/person',
       routes: {
-        '/cards': (context) => const CardPage(),
+        '/person': (context) => const CardPage(),
         '/skills': (context) => const SkillPage(),
         '/experience': (context) => const ExperiencePage(),
       },

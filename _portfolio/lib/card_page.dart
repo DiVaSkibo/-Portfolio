@@ -28,7 +28,7 @@ class _CardPageState extends State<CardPage> {
               child: Text('Skills'),
             ),
             TextButton(
-              onPressed: () => print('-> Experience'),
+              onPressed: () => Navigator.pushNamed(context, '/experience'),
               child: Text('Experience'),
             ),
             TextButton(

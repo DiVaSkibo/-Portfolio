@@ -1,3 +1,4 @@
+import 'package:_portfolio/experience_page.dart';
 import 'package:_portfolio/skill_page.dart';
 
 import '__tools.dart';
@@ -25,6 +26,7 @@ class App extends StatelessWidget {
       routes: {
         '/cards': (context) => const CardPage(),
         '/skills': (context) => const SkillPage(),
+        '/experience': (context) => const ExperiencePage(),
       },
     );
   }

@@ -30,7 +30,7 @@ class _SkillPageState extends State<SkillPage> {
               child: Text('Skills'),
             ),
             TextButton(
-              onPressed: () => print('-> Experience'),
+              onPressed: () => Navigator.pushNamed(context, '/experience'),
               child: Text('Experience'),
             ),
             TextButton(

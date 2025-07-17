@@ -16,6 +16,7 @@ final class ColorsTool {
   static const Color mainShade = Color(0xFF241345);
   static const Color accent = Color(0xFF00FFAA);
   static const Color accentShade = Color(0xFF092E22);
+  static const Color notation = Color(0xFF7A67A1);
 
   static const Map<Level, Color> level = {
     Level.beginner: Color(0xFFFFA64D),
@@ -30,7 +31,14 @@ final class ColorsTool {
 }
 
 final class StyleTool {
-  static const TextStyle header = TextStyle(fontSize: 36);
+  static const TextStyle header = TextStyle(
+    fontWeight: FontWeight.w500,
+    fontSize: 36,
+  );
+  static const TextStyle note = TextStyle(
+    fontWeight: FontWeight.w500,
+    color: ColorsTool.notation,
+  );
 
   static TextStyle statusText(Level level) => TextStyle(
     fontSize: 13,

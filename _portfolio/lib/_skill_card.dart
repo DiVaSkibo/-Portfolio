@@ -23,8 +23,9 @@ class _SkillCardState extends State<SkillCard> {
         color: ColorsTool.main,
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(widget.title),
+          Text(widget.title, style: StyleTool.header),
           dividerMain,
           Column(spacing: 9, children: widget.body),
         ],

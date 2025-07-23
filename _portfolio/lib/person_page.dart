@@ -39,26 +39,28 @@ class _CardPageState extends State<CardPage> {
         ),
       ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsetsGeometry.all(36),
-          child: Column(
-            spacing: 36,
-            children: [
-              PersonCard(
-                title: 'Dmytro SKIBO',
-                body:
-                    'Learn Computer Science in National Aerospace University - Kharkiv Aviation Institute. Faculty of Aircraft Control Systems. Department of Mathematical Modelling and Artificial Intelligence.',
-                image: 'assets/image/Me.jpg',
-                info: '16.12.2004\nKharkiv, Ukraine',
-                links:
-                    '+380 66 727 4718\npipaski0264@gmail.com\nhttps://t.me/Zlo_Ol2',
-              ),
-              PersonCard(
-                title: 'Zlo_Ol2',
-                body: '-[._.]-',
-                image: 'assets/image/OO.jpg',
-              ),
-            ],
+        child: Center(
+          child: Padding(
+            padding: EdgeInsetsGeometry.all(36),
+            child: Column(
+              spacing: 36,
+              children: [
+                PersonCard(
+                  title: 'Dmytro SKIBO',
+                  body:
+                      'Learn Computer Science in National Aerospace University - Kharkiv Aviation Institute. Faculty of Aircraft Control Systems. Department of Mathematical Modelling and Artificial Intelligence.',
+                  image: 'assets/image/Me.jpg',
+                  info: '16.12.2004\nKharkiv, Ukraine',
+                  links:
+                      '+380 66 727 4718\npipaski0264@gmail.com\nhttps://t.me/Zlo_Ol2',
+                ),
+                PersonCard(
+                  title: 'Zlo_Ol2',
+                  body: '-[._.]-',
+                  image: 'assets/image/OO.jpg',
+                ),
+              ],
+            ),
           ),
         ),
       ),

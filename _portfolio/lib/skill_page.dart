@@ -25,16 +25,13 @@ class _SkillPageState extends State<SkillPage> {
         title: Row(
           spacing: 27,
           children: [
-            TextButton(
-              onPressed: () => print('-> Skills'),
-              child: Text('Skills'),
-            ),
+            TextButton(onPressed: () => {}, child: Text('Skills')),
             TextButton(
               onPressed: () => Navigator.pushNamed(context, '/experience'),
               child: Text('Experience'),
             ),
             TextButton(
-              onPressed: () => print('-> Projects'),
+              onPressed: () => Navigator.pushNamed(context, '/projects'),
               child: Text('Projects'),
             ),
           ],
@@ -106,7 +103,7 @@ class _SkillPageState extends State<SkillPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => print('-> up'),
+        onPressed: () => {},
         backgroundColor: ColorsTool.accent,
         shape: CircleBorder(),
         child: Center(

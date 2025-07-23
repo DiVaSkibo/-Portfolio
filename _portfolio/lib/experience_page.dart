@@ -27,12 +27,9 @@ class _ExperiencePageState extends State<ExperiencePage> {
               onPressed: () => Navigator.pushNamed(context, '/skills'),
               child: Text('Skills'),
             ),
+            TextButton(onPressed: () => {}, child: Text('Experience')),
             TextButton(
-              onPressed: () => print('-> Experience'),
-              child: Text('Experience'),
-            ),
-            TextButton(
-              onPressed: () => print('-> Projects'),
+              onPressed: () => Navigator.pushNamed(context, '/projects'),
               child: Text('Projects'),
             ),
           ],
@@ -89,7 +86,7 @@ class _ExperiencePageState extends State<ExperiencePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => print('-> up'),
+        onPressed: () => {},
         backgroundColor: ColorsTool.accent,
         shape: CircleBorder(),
         child: Center(

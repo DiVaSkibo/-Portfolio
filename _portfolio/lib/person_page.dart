@@ -17,7 +17,7 @@ class _CardPageState extends State<CardPage> {
       appBar: AppBar(
         backgroundColor: ColorsTool.main,
         leading: IconButton(
-          onPressed: () => print('-> card page'),
+          onPressed: () => {},
           icon: Icon(Icons.accessibility, size: 36, color: ColorsTool.accent),
         ),
         title: Row(
@@ -32,7 +32,7 @@ class _CardPageState extends State<CardPage> {
               child: Text('Experience'),
             ),
             TextButton(
-              onPressed: () => print('-> Projects'),
+              onPressed: () => Navigator.pushNamed(context, '/projects'),
               child: Text('Projects'),
             ),
           ],
@@ -65,7 +65,7 @@ class _CardPageState extends State<CardPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => print('-> up'),
+        onPressed: () => {},
         backgroundColor: ColorsTool.accent,
         shape: CircleBorder(),
         child: Center(

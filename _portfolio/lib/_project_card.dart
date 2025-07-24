@@ -23,6 +23,8 @@ class ProjectCard extends StatefulWidget {
 }
 
 class _ProjectCardState extends State<ProjectCard> {
+  final ScrollController _scrollController = ScrollController();
+
   @override
   Widget build(BuildContext context) {
     final List<String>? screenshotsAssets = widget.screenshots;
@@ -66,17 +68,55 @@ class _ProjectCardState extends State<ProjectCard> {
                     children: [
                       Text(widget.title, style: StyleTool.header),
                       if (screenshots.isNotEmpty)
-                        SizedBox(
-                          height: 100,
-                          child: ListView.separated(
-                            scrollDirection: Axis.horizontal,
-                            separatorBuilder: (context, _) =>
-                                SizedBox(width: 9),
-                            itemCount: screenshots.length,
-                            itemBuilder: (context, index) {
-                              return screenshots[index];
-                            },
-                          ),
+                        Row(
+                          children: [
+                            if (screenshots.length >= 3)
+                              IconButton(
+                                onPressed: () {
+                                  if (_scrollController.position.pixels >=
+                                      _scrollController
+                                          .position
+                                          .minScrollExtent) {
+                                    _scrollController.animateTo(
+                                      _scrollController.position.pixels - 381,
+                                      duration: Durations.medium3,
+                                      curve: Curves.easeOut,
+                                    );
+                                  }
+                                },
+                                icon: Icon(Icons.arrow_left),
+                              ),
+                            Expanded(
+                              child: SizedBox(
+                                height: 100,
+                                child: ListView.builder(
+                                  scrollDirection: Axis.horizontal,
+                                  physics: const BouncingScrollPhysics(),
+                                  controller: _scrollController,
+                                  itemCount: screenshots.length,
+                                  itemBuilder: (context, index) {
+                                    return screenshots[index];
+                                  },
+                                ),
+                              ),
+                            ),
+                            if (screenshots.length >= 3)
+                              IconButton(
+                                onPressed: () {
+                                  if (_scrollController.position.pixels <=
+                                      _scrollController
+                                          .position
+                                          .maxScrollExtent) {
+                                    _scrollController.animateTo(
+                                      _scrollController.position.pixels + 381,
+                                      duration: Durations.medium3,
+                                      curve: Curves.easeOut,
+                                    );
+                                  }
+                                },
+                                icon: Icon(Icons.arrow_right),
+                              ),
+                          ],
                         ),
                       if (links != null) Text(links, style: StyleTool.note),
                     ],

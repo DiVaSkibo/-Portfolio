@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+enum ToDirections { start, end }
+
 enum Level {
   beginner,
   elementary,

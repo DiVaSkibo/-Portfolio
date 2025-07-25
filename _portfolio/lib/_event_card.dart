@@ -21,17 +21,14 @@ class EventCard extends StatefulWidget {
 class _EventCardState extends State<EventCard> {
   @override
   Widget build(BuildContext context) {
-    final List<Marker> markers = [];
-    for (String experience in widget.experiences) {
-      markers.add(Marker.circle(child: Text(experience)));
-    }
+    final List<Marker> markers = List.generate(
+      widget.experiences.length,
+      (index) => Marker.circle(child: Text(widget.experiences[index])),
+    );
     return Container(
       padding: EdgeInsetsGeometry.all(36),
       width: 527,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        //color: ColorsTool.main,
-      ),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

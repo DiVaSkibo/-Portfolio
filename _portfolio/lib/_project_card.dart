@@ -71,7 +71,7 @@ class _ProjectCardState extends State<ProjectCard> {
                 ),
               ],
             ),
-            Text(widget.body),
+            Text(widget.body, style: StyleTool.description),
           ],
         ),
       ),

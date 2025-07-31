@@ -17,9 +17,12 @@ class App extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: ColorsTool.mainShade,
         brightness: Brightness.dark,
-        textTheme: TextTheme(bodyMedium: const TextStyle(fontSize: 18)),
+        textTheme: TextTheme(bodyMedium: StyleTool.basic),
         textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(foregroundColor: Colors.white),
+          style: TextButton.styleFrom(
+            foregroundColor: Colors.white,
+            textStyle: StyleTool.buttonText,
+          ),
         ),
       ),
       initialRoute: '/person',

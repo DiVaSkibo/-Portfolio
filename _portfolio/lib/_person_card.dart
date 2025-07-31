@@ -53,7 +53,12 @@ class _PersonCardState extends State<PersonCard> {
                   ),
                 ),
                 if (info != null) Text(info, textAlign: TextAlign.left),
-                if (links != null) Text(links, textAlign: TextAlign.right),
+                if (links != null)
+                  Text(
+                    links,
+                    textAlign: TextAlign.right,
+                    style: StyleTool.note,
+                  ),
               ],
             ),
             Expanded(

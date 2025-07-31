@@ -33,19 +33,31 @@ final class ColorsTool {
 }
 
 final class StyleTool {
+  static const TextStyle basic = TextStyle(
+    fontWeight: FontWeight.w400,
+    fontSize: 18,
+  );
   static const TextStyle header = TextStyle(
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
     fontSize: 36,
   );
+  static const TextStyle description = TextStyle(
+    fontWeight: FontWeight.w300,
+    fontSize: 15,
+  );
   static const TextStyle note = TextStyle(
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
     fontStyle: FontStyle.italic,
     color: ColorsTool.notation,
+  );
+  static const TextStyle buttonText = TextStyle(
+    fontWeight: FontWeight.w300,
+    fontSize: 18,
   );
 
   static TextStyle statusText(Level level) => TextStyle(
     fontSize: 13,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
     fontStyle: FontStyle.italic,
     color: ColorsTool.level[level],
   );

@@ -58,7 +58,7 @@ class _CardPageState extends State<CardPage> {
                   title: 'Zlo_Ol2',
                   body:
                       '+ v o . c D[    Г o] D] L] A L]    D]    v L] A o . L] D + ^ г г ^[ Г    v[ ґ    D + o] +] L o    .',
-                  image: 'assets/image/Zlo.png',
+                  image: 'assets/image/Zlo.jpg',
                   links:
                       'https://www.youtube.com/@dunkelbahn7022\nhttps://www.youtube.com/@zlo_ol2',
                 ),

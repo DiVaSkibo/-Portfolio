@@ -1,5 +1,5 @@
-import '__tools.dart';
-import '_event_card.dart';
+import 'package:_portfolio/__tools.dart';
+import 'package:_portfolio/_event_card.dart';
 import 'package:flutter/material.dart';
 
 class ExperiencePage extends StatefulWidget {

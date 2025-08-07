@@ -1,7 +1,6 @@
+import 'package:_portfolio/__tools.dart';
 import 'package:_portfolio/__widgets.dart';
 import 'package:_portfolio/_skill_card.dart';
-
-import '__tools.dart';
 import 'package:flutter/material.dart';
 
 class SkillPage extends StatefulWidget {

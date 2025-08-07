@@ -1,6 +1,5 @@
+import 'package:_portfolio/__tools.dart';
 import 'package:_portfolio/_project_card.dart';
-
-import '__tools.dart';
 import 'package:flutter/material.dart';
 
 class ProjectPage extends StatefulWidget {

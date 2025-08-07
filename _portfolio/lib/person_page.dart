@@ -1,5 +1,5 @@
-import '__tools.dart';
-import '_person_card.dart';
+import 'package:_portfolio/__tools.dart';
+import 'package:_portfolio/_person_card.dart';
 import 'package:flutter/material.dart';
 
 class CardPage extends StatefulWidget {
@@ -49,7 +49,7 @@ class _CardPageState extends State<CardPage> {
                   title: 'Dmytro SKIBO',
                   body:
                       'Learn Computer Science in National Aerospace University - Kharkiv Aviation Institute. Faculty of Aircraft Control Systems. Department of Mathematical Modelling and Artificial Intelligence.',
-                  image: 'assets/image/Me.jpg',
+                  image: 'assets/image/avatar/Me.jpg',
                   info: '16.12.2004\nKharkiv, Ukraine',
                   links:
                       '+380 66 727 4718\npipaski0264@gmail.com\nhttps://t.me/Zlo_Ol2',
@@ -58,7 +58,7 @@ class _CardPageState extends State<CardPage> {
                   title: 'Zlo_Ol2',
                   body:
                       '+ v o . c D[    Г o] D] L] A L]    D]    v L] A o . L] D + ^ г г ^[ Г    v[ ґ    D + o] +] L o    .',
-                  image: 'assets/image/Zlo.jpg',
+                  image: 'assets/image/avatar/Zlo.jpg',
                   links:
                       'https://www.youtube.com/@dunkelbahn7022\nhttps://www.youtube.com/@zlo_ol2',
                 ),

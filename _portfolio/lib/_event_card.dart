@@ -1,5 +1,5 @@
-import '__tools.dart';
-import '__widgets.dart';
+import 'package:_portfolio/__tools.dart';
+import 'package:_portfolio/__widgets.dart';
 import 'package:flutter/material.dart';
 
 class EventCard extends StatefulWidget {

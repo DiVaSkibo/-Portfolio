@@ -1,13 +1,14 @@
 import 'package:_portfolio/__tools.dart';
 import 'package:_portfolio/__widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PersonCard extends StatefulWidget {
   final String title;
   final String body;
   final String image;
   final String? info;
-  final String? links;
+  final Map<String, String>? links;
 
   const PersonCard({
     super.key,
@@ -26,7 +27,13 @@ class _PersonCardState extends State<PersonCard> {
   @override
   Widget build(BuildContext context) {
     final String? info = widget.info;
-    final String? links = widget.links;
+    final links = widget.links;
+    final List<Map> uris = [];
+    if (links != null) {
+      for (final String key in links.keys) {
+        uris.add({'text': key, 'link': Uri.parse(links[key]!)});
+      }
+    }
     return SingleChildScrollView(
       child: Container(
         padding: EdgeInsetsGeometry.all(36),
@@ -53,11 +60,15 @@ class _PersonCardState extends State<PersonCard> {
                   ),
                 ),
                 if (info != null) Text(info, textAlign: TextAlign.left),
-                if (links != null)
-                  Text(
-                    links,
-                    textAlign: TextAlign.right,
-                    style: StyleTool.note,
+                if (uris.isNotEmpty)
+                  Column(
+                    children: List.generate(
+                      uris.length,
+                      (index) => InkWell(
+                        child: Text(uris[index]['text'], style: StyleTool.note),
+                        onTap: () => launchUrl(uris[index]['link']),
+                      ),
+                    ),
                   ),
               ],
             ),

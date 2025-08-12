@@ -51,17 +51,20 @@ class _CardPageState extends State<CardPage> {
                       'Learn Computer Science in National Aerospace University - Kharkiv Aviation Institute. Faculty of Aircraft Control Systems. Department of Mathematical Modelling and Artificial Intelligence.',
                   image: 'assets/image/avatar/Me.jpg',
                   info: '16.12.2004\nKharkiv, Ukraine',
-                  links:
-                      '+380 66 727 4718\npipaski0264@gmail.com\nhttps://t.me/Zlo_Ol2',
+                  links: {
+                    '+380 66 727 4718': '+380 66 727 4718',
+                    'pipaski0264@gmail.com': 'pipaski0264@gmail.com',
+                    'https://t.me/Zlo_Ol2': 'https://t.me/Zlo_Ol2',
+                  },
                 ),
-                PersonCard(
-                  title: 'Zlo_Ol2',
-                  body:
-                      '+ v o . c D[    Г o] D] L] A L]    D]    v L] A o . L] D + ^ г г ^[ Г    v[ ґ    D + o] +] L o    .',
-                  image: 'assets/image/avatar/Zlo.jpg',
-                  links:
-                      'https://www.youtube.com/@dunkelbahn7022\nhttps://www.youtube.com/@zlo_ol2',
-                ),
+                // PersonCard(
+                //   title: 'Zlo_Ol2',
+                //   body:
+                //       '+ v o . c D[    Г o] D] L] A L]    D]    v L] A o . L] D + ^ г г ^[ Г    v[ ґ    D + o] +] L o    .',
+                //   image: 'assets/image/avatar/Zlo.jpg',
+                //   links:
+                //       'https://www.youtube.com/@dunkelbahn7022\nhttps://www.youtube.com/@zlo_ol2',
+                // ),
               ],
             ),
           ),

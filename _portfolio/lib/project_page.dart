@@ -53,8 +53,10 @@ class _ProjectPageState extends State<ProjectPage> {
                     'assets/image/project/Screenshot_QuasarisCo_2.jpg',
                     'assets/image/project/Screenshot_QuasarisCo_3.jpg',
                   ],
-                  links:
-                      'itch.io: https://em-o-ja.itch.io/quasaris-co\nGitHub: https://github.com/DiVaSkibo/Course-work.git',
+                  links: {
+                    'itch.io': 'https://em-o-ja.itch.io/quasaris-co',
+                    'GitHub': 'https://github.com/DiVaSkibo/Course-work.git',
+                  },
                 ),
                 ProjectCard(
                   title: 'Domino Circo vel Circo Domino',
@@ -69,8 +71,13 @@ class _ProjectPageState extends State<ProjectPage> {
                     'assets/image/project/Screenshot_DominoCircovelCircoDomino_3.jpg',
                     'assets/image/project/Screenshot_DominoCircovelCircoDomino_4.jpg',
                   ],
-                  links:
-                      'GGJ: https://globalgamejam.org/games/2025/circus-lies-and-shadows-6\nitch.io: https://em-o-ja.itch.io/domino-circo-vel-circo-domino\nGitHub: https://github.com/DiVaSkibo/Disinfo-bubble.git',
+                  links: {
+                    'itch.io':
+                        'https://em-o-ja.itch.io/domino-circo-vel-circo-domino',
+                    'GGJ':
+                        'https://globalgamejam.org/games/2025/circus-lies-and-shadows-6',
+                    'GitHub': 'https://github.com/DiVaSkibo/Disinfo-bubble.git',
+                  },
                 ),
                 ProjectCard(
                   title: 'Exit Exist?',
@@ -82,7 +89,9 @@ class _ProjectPageState extends State<ProjectPage> {
                     'assets/image/project/Screenshot_ExitExist_1.jpg',
                     'assets/image/project/Screenshot_ExitExist_2.jpg',
                   ],
-                  links: 'https://globalgamejam.org/games/2024/exit-exist-0',
+                  links: {
+                    'GGJ': 'https://globalgamejam.org/games/2024/exit-exist-0',
+                  },
                 ),
                 ProjectCard(
                   title: 'ROOTS',
@@ -93,7 +102,9 @@ class _ProjectPageState extends State<ProjectPage> {
                     'assets/image/project/Screenshot_ROOTS_0.jpg',
                     'assets/image/project/Screenshot_ROOTS_1.jpg',
                   ],
-                  links: 'https://globalgamejam.org/2023/games/roots-2-3',
+                  links: {
+                    'GGJ': 'https://globalgamejam.org/2023/games/roots-2-3',
+                  },
                 ),
               ],
             ),

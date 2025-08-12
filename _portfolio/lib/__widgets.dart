@@ -79,17 +79,17 @@ class Marker extends StatefulWidget {
       offsetHorizontal = 0;
 
   @override
-  State<Marker> createState() => MarkerState();
+  State<Marker> createState() => _MarkerState();
 }
 
-class MarkerState extends State<Marker> {
+class _MarkerState extends State<Marker> {
   @override
   Widget build(BuildContext context) {
     final offsetHorizontal = widget.offsetHorizontal;
     return Row(
       spacing: 18,
       children: [
-        if (offsetHorizontal != 0) SizedBox(width: 2),
+        if (offsetHorizontal > 0) SizedBox(width: offsetHorizontal),
         Icon(widget.marker, size: widget.size, color: widget.color),
         widget.child,
       ],
